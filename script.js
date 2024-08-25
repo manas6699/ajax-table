@@ -3,7 +3,7 @@
             // Initialize DataTables with AJAX
             var table = $('#transactionTable').DataTable({
                 "ajax": {
-                    "url": "https://big9.fynbnk.com/ajax_test", // Replace with your API endpoint
+                    "url": "http://demo6285215.mockable.io/test", // Replace with your API endpoint
                     "type": "POST",
                     "dataSrc": ""
                 },
