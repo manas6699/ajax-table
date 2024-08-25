@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Table</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>PG Reports</h1>
+    <p>Welcome Softic Finance Management</p>
+    <div class="date-filter-card">
+        <div class="date-filter-content">
+            <label for="endDate">Start Date:</label>
+            <input type="date" id="minDate">
+        </div>
+        <div class="date-filter-content">
+            <label for="startDate">End Date:</label>
+            <input type="date" id="maxDate">
+        </div>
+        <button id="applyDateFilter">Apply Filter</button>
+    </div>
+
+
+    <table id="transactionTable" class="display">
+        <thead>
+            <tr>
+                <th>Transaction Date</th>
+                <th>Transaction ID</th>
+                <th>Internal ID</th>
+                <th>Order ID</th>
+                <th>Transaction Amount</th>
+                <th>RMN</th>
+                <th>
+                    <div class="status-header">
+                        Transaction Status
+                        <select id="statusFilter">
+                            <option value="">All</option>
+                            <option value="Success">Success</option>
+                            <option value="Failed">Failed</option>
+                            <option value="Hold">Hold</option>
+                        </select>
+                    </div>
+                    
+                </th>
+                <th>Mode</th>
+                
+                <th>
+                     <div class="status-header">
+                        Gateway
+                        <select id="gatewayFilter">
+                            <option value="">All</option>
+                            <option value="PayU">PayU</option>
+                            <option value="RP">RP</option>
+                            <option value="CashFree">CashFree</option>
+                        </select>
+                    </div>
+                </th>
+               <th>
+                <div class="status-header">
+                    Settlement Status
+                    <select id="settlementFilter">
+                        <option value="">All</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Success">Success</option>
+                        <option value="Precessing">Precessing</option>
+                    </select>
+                </div>
+               </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+   
+    <button id="downloadExcel">Download Excel</button>
+
+   <script src="./script.js"></script>
+
+    <!-- SheetJS for Excel download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+</body>
+
+</html>

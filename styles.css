@@ -1,0 +1,279 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+p {
+    margin: 0 10px 50px 0px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    padding: auto;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="date"],
+select {
+    padding: 8px 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* DataTables Styling */
+table.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+table.dataTable thead {
+    background-color: #3498db;
+    color: white;
+}
+
+table.dataTable th,
+table.dataTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table.dataTable th {
+    font-weight: 600;
+}
+
+table.dataTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.dataTables_length select {
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.dataTables_filter input {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Custom Date Filter Styling */
+#statusFilter,
+#minDate,
+#maxDate {
+    margin-bottom: 15px;
+}
+
+#minDate, #maxDate {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#statusFilter {
+    display: block;
+    width: 100%;
+}
+
+/* Positioning the filter beside the Transaction Status heading */
+.status-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status-header select {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.status-header select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Date Filter Card */
+.date-filter-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date-filter-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.date-filter-content label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.date-filter-content input[type="date"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.date-filter-content input[type="date"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Apply Filter Button */
+#applyDateFilter {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+#applyDateFilter:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .date-filter-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date-filter-content {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #applyDateFilter {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .status-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .status-header select {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    table.dataTable th,
+    table.dataTable td {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .date-filter-card {
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    table.dataTable th,
+    table.dataTable td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .date-filter-card {
+        padding: 8px;
+    }
+
+    button {
+        padding: 6px 12px;
+    }
+}
